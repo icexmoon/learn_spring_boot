@@ -1,0 +1,6 @@
+=====================================================
+This is my exampled spring boot app.
+name:${application.title}
+version:${application.formatted-version}
+spring boot version:${spring-boot.formatted-version}
+=====================================================
