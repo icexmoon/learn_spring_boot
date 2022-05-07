@@ -7,9 +7,11 @@ import cn.icexmoon.my_first_app.service.UserServiceInterface;
 import cn.icexmoon.my_first_app.service.UserServiceMPImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+@Slf4j
 @Api(tags="用户管理")
 @RestController
 @RequestMapping("/user")
@@ -90,6 +92,7 @@ public class UserController {
     @ApiOperation("获取用户列表")
     @GetMapping("")
     public String getUsers() {
+        log.info("getUsers is called.========");
         Result result = new Result();
         result.setData(userServiceInterface.getUsers());
         return result.toString();

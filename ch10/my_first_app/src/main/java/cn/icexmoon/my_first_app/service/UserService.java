@@ -2,7 +2,6 @@ package cn.icexmoon.my_first_app.service;
 
 import cn.icexmoon.my_first_app.mapper.UserMapper;
 import cn.icexmoon.my_first_app.model.User;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
@@ -41,5 +40,4 @@ public class UserService implements UserServiceInterface {
     public void updateUser(User user) {
         userMapper.updateById(user);
     }
-
 }

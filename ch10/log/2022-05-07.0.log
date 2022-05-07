@@ -1,0 +1,144 @@
+15:35:13.762 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'logging.level.cn.icexmoon.myfirstapp' to org.springframework.boot.logging.LogLevel:
+
+    Property: logging.level.cn.icexmoon.myfirstapp
+    Value: trance
+    Origin: class path resource [application.properties] - 8:40
+    Reason: failed to convert java.lang.String to org.springframework.boot.logging.LogLevel (caused by java.lang.IllegalArgumentException: No enum constant org.springframework.boot.logging.LogLevel.trance)
+
+Action:
+
+Update your application's configuration. The following values are valid:
+
+    DEBUG
+    ERROR
+    FATAL
+    INFO
+    OFF
+    TRACE
+    WARN
+
+15:37:15.330 [restartedMain] INFO  c.i.m.MyFirstAppApplication - Starting MyFirstAppApplication using Java 16.0.1 on icexmoon-book with PID 1100 (D:\workspace\java\learn_spring_boot\ch10\my_first_app\target\classes started by 70748 in D:\workspace\java\learn_spring_boot\ch10\my_first_app)
+15:37:15.335 [restartedMain] DEBUG c.i.m.MyFirstAppApplication - Running with Spring Boot v2.6.7, Spring v5.3.19
+15:37:15.336 [restartedMain] INFO  c.i.m.MyFirstAppApplication - No active profile set, falling back to 1 default profile: "default"
+15:37:15.443 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+15:37:15.443 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+15:37:17.703 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+15:37:17.723 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+15:37:17.723 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:37:17.724 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.62]
+15:37:17.904 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:37:17.904 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2460 ms
+15:37:19.118 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+15:37:19.333 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+15:37:19.384 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+15:37:19.714 [restartedMain] INFO  c.i.m.MyFirstAppApplication - Started MyFirstAppApplication in 5.107 seconds (JVM running for 7.018)
+15:37:29.534 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:37:29.535 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:37:29.539 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+15:41:31.835 [restartedMain] INFO  c.i.m.MyFirstAppApplication - Starting MyFirstAppApplication using Java 16.0.1 on icexmoon-book with PID 1100 (D:\workspace\java\learn_spring_boot\ch10\my_first_app\target\classes started by 70748 in D:\workspace\java\learn_spring_boot\ch10\my_first_app)
+15:41:31.836 [restartedMain] DEBUG c.i.m.MyFirstAppApplication - Running with Spring Boot v2.6.7, Spring v5.3.19
+15:41:31.836 [restartedMain] INFO  c.i.m.MyFirstAppApplication - No active profile set, falling back to 1 default profile: "default"
+15:41:33.216 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+15:41:33.217 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+15:41:33.218 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:41:33.219 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.62]
+15:41:33.309 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:41:33.309 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1460 ms
+15:41:33.913 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+15:41:34.047 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+15:41:34.059 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+15:41:34.239 [restartedMain] INFO  c.i.m.MyFirstAppApplication - Started MyFirstAppApplication in 2.522 seconds (JVM running for 261.543)
+15:41:34.245 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+15:41:37.740 [restartedMain] INFO  c.i.m.MyFirstAppApplication - Starting MyFirstAppApplication using Java 16.0.1 on icexmoon-book with PID 1100 (D:\workspace\java\learn_spring_boot\ch10\my_first_app\target\classes started by 70748 in D:\workspace\java\learn_spring_boot\ch10\my_first_app)
+15:41:37.740 [restartedMain] DEBUG c.i.m.MyFirstAppApplication - Running with Spring Boot v2.6.7, Spring v5.3.19
+15:41:37.740 [restartedMain] INFO  c.i.m.MyFirstAppApplication - No active profile set, falling back to 1 default profile: "default"
+15:41:38.881 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+15:41:38.882 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+15:41:38.883 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:41:38.883 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.62]
+15:41:38.963 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:41:38.964 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1218 ms
+15:41:39.421 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+15:41:39.537 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+15:41:39.545 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+15:41:39.675 [restartedMain] INFO  c.i.m.MyFirstAppApplication - Started MyFirstAppApplication in 1.99 seconds (JVM running for 266.979)
+15:41:39.679 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+15:41:47.825 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:41:47.826 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:41:47.831 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+15:41:47.833 [http-nio-8080-exec-1] DEBUG c.i.m.controller.HelloController - hello world!================
+16:09:15.302 [restartedMain] INFO  c.i.m.MyFirstAppApplication - Starting MyFirstAppApplication using Java 16.0.1 on icexmoon-book with PID 1100 (D:\workspace\java\learn_spring_boot\ch10\my_first_app\target\classes started by 70748 in D:\workspace\java\learn_spring_boot\ch10\my_first_app)
+16:09:15.302 [restartedMain] DEBUG c.i.m.MyFirstAppApplication - Running with Spring Boot v2.6.7, Spring v5.3.19
+16:09:15.303 [restartedMain] INFO  c.i.m.MyFirstAppApplication - No active profile set, falling back to 1 default profile: "default"
+16:09:16.420 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+16:09:16.422 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+16:09:16.423 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:09:16.423 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.62]
+16:09:16.495 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:09:16.495 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1185 ms
+16:09:16.882 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+16:09:16.977 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+16:09:16.984 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+16:09:17.023 [restartedMain] INFO  c.i.m.MyFirstAppApplication - Started MyFirstAppApplication in 1.826 seconds (JVM running for 1924.326)
+16:09:17.026 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+16:09:19.693 [restartedMain] INFO  c.i.m.MyFirstAppApplication - Starting MyFirstAppApplication using Java 16.0.1 on icexmoon-book with PID 1100 (D:\workspace\java\learn_spring_boot\ch10\my_first_app\target\classes started by 70748 in D:\workspace\java\learn_spring_boot\ch10\my_first_app)
+16:09:19.693 [restartedMain] DEBUG c.i.m.MyFirstAppApplication - Running with Spring Boot v2.6.7, Spring v5.3.19
+16:09:19.694 [restartedMain] INFO  c.i.m.MyFirstAppApplication - No active profile set, falling back to 1 default profile: "default"
+16:09:21.010 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+16:09:21.013 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+16:09:21.014 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:09:21.014 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.62]
+16:09:21.122 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:09:21.122 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1422 ms
+16:09:21.620 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+16:09:22.241 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+16:09:22.422 [restartedMain] INFO  c.i.m.MyFirstAppApplication - Started MyFirstAppApplication in 2.824 seconds (JVM running for 1929.726)
+16:09:22.432 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+16:09:28.679 [restartedMain] INFO  c.i.m.MyFirstAppApplication - Starting MyFirstAppApplication using Java 16.0.1 on icexmoon-book with PID 18452 (D:\workspace\java\learn_spring_boot\ch10\my_first_app\target\classes started by 70748 in D:\workspace\java\learn_spring_boot\ch10\my_first_app)
+16:09:28.683 [restartedMain] DEBUG c.i.m.MyFirstAppApplication - Running with Spring Boot v2.6.7, Spring v5.3.19
+16:09:28.685 [restartedMain] INFO  c.i.m.MyFirstAppApplication - No active profile set, falling back to 1 default profile: "default"
+16:09:28.790 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+16:09:28.791 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+16:09:31.418 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+16:09:31.433 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+16:09:31.433 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:09:31.434 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.62]
+16:09:31.590 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:09:31.590 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2798 ms
+16:09:32.768 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+16:09:32.998 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+16:09:33.031 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+16:09:33.382 [restartedMain] INFO  c.i.m.MyFirstAppApplication - Started MyFirstAppApplication in 5.534 seconds (JVM running for 7.748)
+16:09:53.027 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:09:53.028 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+16:09:53.029 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+16:09:53.061 [http-nio-8080-exec-1] INFO  c.i.m.controller.UserController - getUsers is called.========
+16:09:53.152 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+16:09:53.384 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+16:09:53.396 [http-nio-8080-exec-1] DEBUG c.i.m.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,name,age FROM user
+16:09:53.427 [http-nio-8080-exec-1] DEBUG c.i.m.mapper.UserMapper.selectList - ==> Parameters: 
+16:09:53.465 [http-nio-8080-exec-1] TRACE c.i.m.mapper.UserMapper.selectList - <==    Columns: id, name, age
+16:09:53.466 [http-nio-8080-exec-1] TRACE c.i.m.mapper.UserMapper.selectList - <==        Row: 1, Jack Chen, 20
+16:09:53.469 [http-nio-8080-exec-1] TRACE c.i.m.mapper.UserMapper.selectList - <==        Row: 2, Li lei22, 20
+16:09:53.469 [http-nio-8080-exec-1] TRACE c.i.m.mapper.UserMapper.selectList - <==        Row: 5, Li Xiang, 20
+16:09:53.470 [http-nio-8080-exec-1] TRACE c.i.m.mapper.UserMapper.selectList - <==        Row: 6, 126663, 123
+16:09:53.470 [http-nio-8080-exec-1] TRACE c.i.m.mapper.UserMapper.selectList - <==        Row: 7, icexmoon, 12
+16:09:53.471 [http-nio-8080-exec-1] TRACE c.i.m.mapper.UserMapper.selectList - <==        Row: 8, icexmoon, 12
+16:09:53.471 [http-nio-8080-exec-1] TRACE c.i.m.mapper.UserMapper.selectList - <==        Row: 9, icexmoon, 12
+16:09:53.471 [http-nio-8080-exec-1] TRACE c.i.m.mapper.UserMapper.selectList - <==        Row: 11, icexmoon, 12
+16:09:53.473 [http-nio-8080-exec-1] TRACE c.i.m.mapper.UserMapper.selectList - <==        Row: 12, Li lei22, 20
+16:09:53.474 [http-nio-8080-exec-1] TRACE c.i.m.mapper.UserMapper.selectList - <==        Row: 15, icexmoon, 12
+16:09:53.474 [http-nio-8080-exec-1] TRACE c.i.m.mapper.UserMapper.selectList - <==        Row: 17, icexmoon, 12
+16:09:53.474 [http-nio-8080-exec-1] TRACE c.i.m.mapper.UserMapper.selectList - <==        Row: 18, icexmoon, 12
+16:09:53.475 [http-nio-8080-exec-1] TRACE c.i.m.mapper.UserMapper.selectList - <==        Row: 19, icexmoon, 12
+16:09:53.475 [http-nio-8080-exec-1] DEBUG c.i.m.mapper.UserMapper.selectList - <==      Total: 13
+16:17:53.391 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+16:17:53.400 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

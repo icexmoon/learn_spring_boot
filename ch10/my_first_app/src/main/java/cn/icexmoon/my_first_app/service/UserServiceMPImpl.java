@@ -2,9 +2,6 @@ package cn.icexmoon.my_first_app.service;
 
 import cn.icexmoon.my_first_app.mapper.UserMapper;
 import cn.icexmoon.my_first_app.model.User;
-import com.baomidou.mybatisplus.core.conditions.Wrapper;
-import com.baomidou.mybatisplus.core.conditions.query.Query;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,12 +15,12 @@ public class UserServiceMPImpl extends ServiceImpl<UserMapper, User> implements 
     @Transactional
     public void addSomeUsers(boolean broken) {
         final int SIZE = 3;
-        for (int i = 0; i < SIZE; i++) {
+        for(int i=0;i<SIZE;i++){
             User user = new User();
             user.setAge(10);
             user.setName("test");
             this.addUser(user);
-            if (i == SIZE - 2) {
+            if(i == SIZE-2){
                 if (broken) {
                     throw new RuntimeException("someting broken the data save.");
                 }
@@ -56,5 +53,4 @@ public class UserServiceMPImpl extends ServiceImpl<UserMapper, User> implements 
     public void updateUser(User user) {
         this.updateById(user);
     }
-
 }
