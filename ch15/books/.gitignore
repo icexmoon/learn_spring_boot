@@ -6,6 +6,7 @@ target/
 .mvn
 *.mwb.bak
 upload/
+log/
 
 ### STS ###
 .apt_generated
