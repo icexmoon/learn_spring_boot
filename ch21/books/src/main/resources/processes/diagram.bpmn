@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+                    xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+                    xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+                    xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+                    xmlns:activiti="http://activiti.org/bpmn"
+                    id="Definitions_1kwvfrz" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="9.3.2">
+  <bpmn:process id="Process_0wu4lop" isExecutable="true" name="A test process">
+    <bpmn:startEvent id="StartEvent_0vx5axl">
+      <bpmn:outgoing>Flow_0nv17f1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:endEvent id="Event_1294r00">
+      <bpmn:incoming>Flow_1ke9x09</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:serviceTask id="Activity_0nt5d38" activiti:exclusive="true" name="approve" activiti:class="cn.icexmoon.demo.books.book.entity.task.MyTestTask">
+      <bpmn:incoming>Flow_0nv17f1</bpmn:incoming>
+      <bpmn:outgoing>Flow_1ke9x09</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_0nv17f1" sourceRef="StartEvent_0vx5axl" targetRef="Activity_0nt5d38" />
+    <bpmn:sequenceFlow id="Flow_1ke9x09" sourceRef="Activity_0nt5d38" targetRef="Event_1294r00" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_0wu4lop">
+      <bpmndi:BPMNEdge id="Flow_0nv17f1_di" bpmnElement="Flow_0nv17f1">
+        <di:waypoint x="210" y="118" />
+        <di:waypoint x="210" y="200" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ke9x09_di" bpmnElement="Flow_1ke9x09">
+        <di:waypoint x="210" y="280" />
+        <di:waypoint x="210" y="352" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_0vx5axl">
+        <dc:Bounds x="192" y="82" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1294r00_di" bpmnElement="Event_1294r00">
+        <dc:Bounds x="192" y="352" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0nt5d38_di" bpmnElement="Activity_0nt5d38">
+        <dc:Bounds x="160" y="200" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI"
+             typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath"
+             targetNamespace="http://www.activiti.org/processdef">
+
+    <process id="test01" name="test01" isExecutable="true">
+        <startEvent id="sid-d0c54d06-2073-4018-8381-e5e43f1b5578" name="Start"/>
+
+        <serviceTask id="sid-0396a986-7e6b-4634-883b-1ee7db9aeb45"
+                     activiti:exclusive="true"
+                     name="Step1"
+                     activiti:class="com.example.actividemo.ServiceTask1">
+            <extensionElements>
+                <activiti:field name="text1">
+                    <activiti:string><![CDATA[test1]]></activiti:string>
+                </activiti:field>
+            </extensionElements>
+        </serviceTask>
+
+        <sequenceFlow id="sid-05a29cc5-7a04-4282-be89-4d83f943774b" sourceRef="sid-d0c54d06-2073-4018-8381-e5e43f1b5578"
+                      targetRef="sid-0396a986-7e6b-4634-883b-1ee7db9aeb45"/>
+
+        <serviceTask id="sid-c43c4370-4407-4746-893f-dcee3e4e9936"
+                     activiti:exclusive="true"
+                     name="Step2"
+                     activiti:class="com.example.actividemo.ServiceTask2">
+            <extensionElements>
+                <activiti:field name="text2">
+                    <activiti:string><![CDATA[test2]]></activiti:string>
+                </activiti:field>
+            </extensionElements>
+        </serviceTask>
+
+        <endEvent id="sid-665b6b28-9b81-4ab7-ba77-6eb50da3c810" name="End"/>
+        <sequenceFlow id="sid-26493bea-97f7-44d4-b7ec-255266dcb8ab" sourceRef="sid-0396a986-7e6b-4634-883b-1ee7db9aeb45"
+                      targetRef="sid-c43c4370-4407-4746-893f-dcee3e4e9936"/>
+        <sequenceFlow id="sid-9f0f635b-4e97-4e95-b1fd-c9996bf659af" sourceRef="sid-c43c4370-4407-4746-893f-dcee3e4e9936"
+                      targetRef="sid-665b6b28-9b81-4ab7-ba77-6eb50da3c810"/>
+    </process>
+</definitions>
