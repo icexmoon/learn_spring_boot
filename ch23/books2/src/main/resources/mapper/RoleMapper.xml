@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.icexmoon.books2.user.mapper.RoleMapper">
+    <select id="queryRoles" resultMap="roleMap">
+        SELECT * FROM
+            `role`
+        WHERE 1=1
+          <if test="dto.name != null and '' != dto.name">
+            AND `name` LIKE CONCAT('%',#{dto.name},'%')
+          </if>
+          <if test="dto.cname != null and '' != dto.cname">
+            AND cname LIKE CONCAT('%',#{dto.cname},'%')
+          </if>
+          <if test="null != dto.level and dto.level >= 0">
+            AND `level`=#{dto.level}
+          </if>
+          AND `del_flag`=0
+    </select>
+    <resultMap id="roleMap" type="cn.icexmoon.books2.user.entity.Role" autoMapping="false">
+<!--        <id property="id" column="id"></id>-->
+<!--        <result property="delFlag" column="del_flag"></result>-->
+        <constructor>
+            <idArg column="id" javaType="Integer"></idArg>
+            <arg column="name" javaType="String"></arg>
+            <arg column="cname" javaType="String"></arg>
+            <arg column="level" javaType="Integer"></arg>
+            <arg column="del_flag" javaType="Integer"></arg>
+        </constructor>
+    </resultMap>
+</mapper>
