@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.icexmoon.books2.book.mapper.BookMapper">
+    <select id="getBookById" resultMap="bookResult">
+        SELECT *
+        FROM book
+        WHERE id = #{id}
+    </select>
+    <resultMap id="bookResult" type="cn.icexmoon.books2.book.entity.Book">
+        <id column="id" property="id"></id>
+        <result property="userId" column="user_id"></result>
+        <association property="user" column="user_id" javaType="cn.icexmoon.books2.user.entity.User"
+                     select="getUserById"></association>
+    </resultMap>
+    <select id="getUserById" resultType="cn.icexmoon.books2.user.entity.User">
+        SELECT *
+        FROM `user`
+        WHERE id = #{user_id}
+    </select>
+
+    <select id="pageBooks" resultMap="bookResult3">
+        SELECT b.*,u.id AS u_id,u.name AS u_name,u.password AS u_password,u.open_id AS u_open_id,u.real_name AS u_real_name,u.icon AS u_icon,u.dept_id AS u_dept_id,u.del_flag AS u_del_flag
+        FROM book AS b
+                 LEFT JOIN `user` AS u
+                           ON b.user_id=u.id
+        WHERE b.del_flag=0
+          AND u.del_flag=0
+            LIMIT #{start},#{limit};
+    </select>
+    <resultMap id="bookResult2" type="cn.icexmoon.books2.book.entity.Book" autoMapping="true">
+        <id column="id" property="id"></id>
+        <result column="user_id" property="userId"></result>
+        <association property="user" columnPrefix="u_" resultMap="userResult"></association>
+    </resultMap>
+    <resultMap id="userResult" type="cn.icexmoon.books2.user.entity.User" autoMapping="true">
+        <id column="id" property="id"></id>
+    </resultMap>
+    <resultMap id="bookResult3" type="cn.icexmoon.books2.book.entity.Book" autoMapping="true">
+        <id column="id" property="id"></id>
+        <result column="user_id" property="userId"></result>
+        <association property="user" columnPrefix="u_" autoMapping="true">
+            <id property="id" column="id"></id>
+        </association>
+    </resultMap>
+    <insert id="addBook" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO book <include refid="bookColumns"></include>
+        VALUES
+            <include refid="bookColumnValues">
+            </include>
+    </insert>
+    <insert id="addBooks" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO book <include refid="bookColumns"></include>
+        VALUES
+        <foreach collection="books" separator="," item="book">
+            <include refid="bookColumnValues">
+            </include>
+        </foreach>
+    </insert>
+    <sql id="bookColumns">
+            (`name`,`description`,user_id,`type`,extra,del_flag)
+    </sql>
+    <sql id="bookColumnValues">
+        (#{book.name},#{book.description},#{book.userId},#{book.type},#{book.extra},0)
+    </sql>
+</mapper>
