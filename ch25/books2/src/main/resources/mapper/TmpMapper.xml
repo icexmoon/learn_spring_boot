@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.icexmoon.books2.common.mapper.TmpMapper">
+    <insert id="addTmp">
+        <selectKey keyProperty="tmp.id" order="BEFORE" resultType="int" keyColumn="a">
+            SELECT ROUND(RAND()*1000000) a;
+        </selectKey>
+        INSERT INTO tmp(id, msg)
+        VALUES (#{tmp.id}, #{tmp.msg})
+    </insert>
+    <sql id="selectAnyTable">
+        SELECT * FROM
+        ${tableName}
+    </sql>
+    <sql id="selectTmpTable">
+        <include refid="selectAnyTable">
+            <property name="tableName" value="tmp"/>
+        </include>
+    </sql>
+    <select id="getAllTmps" resultType="cn.icexmoon.books2.common.entity.Tmp">
+        <include refid="selectTmpTable"></include>
+    </select>
+</mapper>
