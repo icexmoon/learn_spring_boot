@@ -5,6 +5,7 @@ import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.stereotype.Component;
 import springfox.documentation.builders.RequestParameterBuilder;
 import springfox.documentation.schema.ScalarType;
+import springfox.documentation.service.AllowableListValues;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spi.service.ParameterBuilderPlugin;
 import springfox.documentation.spi.service.contexts.ParameterContext;
@@ -52,7 +53,7 @@ public class EnumParameterBuilderPlugin implements ParameterBuilderPlugin {
                 requestParameterBuilder.description(description);
                 requestParameterBuilder.query(simpleParameterSpecificationBuilder -> simpleParameterSpecificationBuilder
                         .model(modelSpecificationBuilde -> modelSpecificationBuilde.scalarModel(ScalarType.INTEGER))
-                        .enumerationFacet(enumerationElementFacetBuilder -> enumerationElementFacetBuilder.allowedValues(displayValues)));
+                        .enumerationFacet(enumerationElementFacetBuilder -> enumerationElementFacetBuilder.allowedValues(new AllowableListValues(displayValues, "Integer"))));
             }
         }
     }

@@ -5,7 +5,10 @@ import com.fasterxml.jackson.databind.introspect.BeanPropertyDefinition;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ReflectionUtils;
+import springfox.documentation.builders.ModelSpecificationBuilder;
 import springfox.documentation.builders.PropertySpecificationBuilder;
+import springfox.documentation.schema.ScalarType;
+import springfox.documentation.service.AllowableListValues;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spi.schema.ModelPropertyBuilderPlugin;
 import springfox.documentation.spi.schema.contexts.ModelPropertyContext;
@@ -64,8 +67,10 @@ public class EnumModelPropertyBuilderPlugin implements ModelPropertyBuilderPlugi
                     e.printStackTrace();
                 }
                 joinText = joinText + "(" + String.join("; ", displayValues) + ")";
+                specificationBuilder.type(new ModelSpecificationBuilder().scalarModel(ScalarType.INTEGER).build());
                 specificationBuilder.description(joinText);
-                specificationBuilder.enumerationFacet(builder -> builder.allowedValues(availableValues));
+                AllowableListValues allowableListValues = new AllowableListValues(availableValues, "Integer");
+                specificationBuilder.enumerationFacet(builder -> builder.allowedValues(allowableListValues));
             }
         }
 
