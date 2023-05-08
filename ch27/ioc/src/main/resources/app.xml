@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="calculator" class="com.example.ioc.Calculator"/>
+    <bean id="supperCalculator" class="com.example.ioc.SupperCalculator">
+<!--        <property name="calculator" ref="calculator"/>-->
+        <constructor-arg ref="calculator"/>
+    </bean>
+    <bean id="supperCalculator1" class="com.example.ioc.SupperCalculator">
+        <constructor-arg ref="calculator"/>
+    </bean>
+    <bean id="supperCalculator2" class="com.example.ioc.SupperCalculator">
+        <constructor-arg ref="calculator"/>
+    </bean>
+    <bean id="supperCalculator3" class="com.example.ioc.SupperCalculator">
+        <constructor-arg ref="calculator"/>
+    </bean>
+</beans>
