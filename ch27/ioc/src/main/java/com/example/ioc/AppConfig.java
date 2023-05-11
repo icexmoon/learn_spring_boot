@@ -24,7 +24,7 @@ import org.springframework.core.io.ClassPathResource;
  */
 @Configuration()
 @ComponentScan(basePackages = "com.example.ioc")
-public class AppConfig implements AppConfigImpl{
+public class AppConfig implements AppConfigImpl, BookCategoryConfigImpl {
     @Bean({"sc1", "supperCalculator1"})
     public SupperCalculator supperCalculator1() {
         Calculator calculator = calculator();
