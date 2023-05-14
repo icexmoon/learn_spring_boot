@@ -7,9 +7,12 @@
         WHERE id=#{id} AND del_flag=0
     </select>
     <resultMap id="couponResult" type="cn.icexmoon.books2.book.entity.Coupon">
+        <result property="type" column="type" typeHandler="cn.icexmoon.books2.book.entity.typehandler.CouponTypeHandler"></result>
         <discriminator javaType="int" column="type">
-            <case value="1" resultType="cn.icexmoon.books2.book.bo.FreeCoupon"></case>
-            <case value="2" resultType="cn.icexmoon.books2.book.bo.EnoughCoupon"></case>
+            <case value="1" resultType="cn.icexmoon.books2.book.bo.FreeCoupon">
+            </case>
+            <case value="2" resultType="cn.icexmoon.books2.book.bo.EnoughCoupon">
+            </case>
         </discriminator>
     </resultMap>
     <insert id="addCoupon" useGeneratedKeys="true" keyProperty="id">

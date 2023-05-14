@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="books" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="books" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="cn.icexmoon.demo.books.BooksApplication" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <option name="ALTERNATIVE_JRE_PATH" value="open-jdk8" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

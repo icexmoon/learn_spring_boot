@@ -18,13 +18,13 @@ import lombok.Data;
  */
 @Data
 public class Book {
-    private Integer id;
-    private String name;
-    private String description;
-    private Integer userId;
-    private Integer type;
-    private String extra;
-    private Integer delFlag;
+    protected Integer id;
+    protected String name;
+    protected String description;
+    protected Integer userId;
+    protected Integer type;
+    protected String extra;
+    protected Integer delFlag;
     //添加图书的用户
-    private User user;
+    protected User user;
 }
