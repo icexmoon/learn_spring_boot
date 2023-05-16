@@ -6,7 +6,6 @@ import cn.icexmoon.books2.book.entity.enums.CouponType;
 import cn.icexmoon.books2.book.service.CouponService;
 import cn.icexmoon.books2.system.Result;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
@@ -44,7 +43,7 @@ public class CouponController {
     @PostMapping("/params-add")
     Result addCouponWithParams(@RequestParam Integer addUserId,
                                @RequestParam Double amount,
-                               @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+//                               @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
                                @RequestParam LocalDateTime expireTime,
                                @RequestParam Double enoughAmount,
                                @RequestParam CouponType type){

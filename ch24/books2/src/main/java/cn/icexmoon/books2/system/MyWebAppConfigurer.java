@@ -1,5 +1,6 @@
 package cn.icexmoon.books2.system;
 
+import cn.icexmoon.books2.system.converter.Str2LocalDateTimeConverter;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -22,5 +23,6 @@ public class MyWebAppConfigurer implements WebMvcConfigurer {
     @Override
     public void addFormatters(FormatterRegistry registry) {
         registry.addConverterFactory(new Str2EnumConverterFactory<>());
+        registry.addConverter(new Str2LocalDateTimeConverter());
     }
 }
