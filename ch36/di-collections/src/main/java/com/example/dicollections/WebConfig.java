@@ -1,5 +1,8 @@
 package com.example.dicollections;
 
+import com.example.dicollections.entity.Car;
+import com.example.dicollections.entity.Motorcycle;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -16,7 +19,27 @@ import org.springframework.context.annotation.Configuration;
  * @Description :
  */
 @Configuration
-public class WebConfig{
+public class WebConfig {
+    @Bean
+    public Car bmp2() {
+        return new Car("bmp2", "俄罗斯", "V8");
+    }
+
+    @Bean
+    public Car t90() {
+        return new Car("T-90", "俄罗斯", "V9");
+    }
+
+    @Bean
+    public Car a99() {
+        return new Car("99A", "中国", "V10");
+    }
+
+    @Bean
+    public Motorcycle f90() {
+        return new Motorcycle("f90", "9号电动车", true);
+    }
+
     //文学
     //文学理论
 //    @Bean
