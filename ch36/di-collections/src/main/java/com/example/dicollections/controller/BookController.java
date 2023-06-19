@@ -36,6 +36,9 @@ public class BookController {
     @Autowired
     private BookCategories bookCategories2;
 
+    @Autowired
+    private List<BookCategory> bookCategories3;
+
 //    @Autowired(required = false)
 //    public void setBookCategories(List<BookCategory> bookCategories) {
 //        this.bookCategories = bookCategories;
@@ -50,6 +53,7 @@ public class BookController {
         System.out.println(bookCategories);
         System.out.println(categories);
         System.out.println(bookCategories2.getList());
+        System.out.println(bookCategories3);
         return Result.success();
     }
 }
