@@ -2,6 +2,7 @@ package com.example.dianno;
 
 import com.example.dianno.entity.Car;
 import com.example.dianno.entity.Motorcycle;
+import com.example.dianno.entity.MultiConstructorExample;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.ApplicationContext;
@@ -23,33 +24,40 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class WebConfig {
-//    @Lazy
+    //    @Lazy
 //    @Autowired
 //    private CarrierService carrierService;
     @Autowired
     private ApplicationContext context;
 
     @Bean
-    Car defaultCar(){
-        return new Car("长安汽车","X5");
+    Car defaultCar() {
+        return new Car("长安汽车", "X5");
     }
 
     @Bean
-    Motorcycle defaultMotorcycle(){
-        return new Motorcycle("哈雷","A7");
+    Motorcycle defaultMotorcycle() {
+        return new Motorcycle("哈雷", "A7");
     }
 
     @Bean
-    ApplicationRunner applicationRunner(){
+    ApplicationRunner applicationRunner() {
         return args -> {
             var carrierService = context.getBean(CarrierService.class);
             var defaultCarrier = carrierService.getDefaultCarrier();
             System.out.println(defaultCarrier);
+            var mce = context.getBean(MultiConstructorExample.class);
+            System.out.println(mce);
         };
     }
 
     @Bean
-    MyBeanPostProcessor myBeanPostProcessor(){
+    MyBeanPostProcessor myBeanPostProcessor() {
         return new MyBeanPostProcessor(defaultMotorcycle());
+    }
+
+    @Bean
+    String msg(){
+        return "This is a String bean.";
     }
 }
