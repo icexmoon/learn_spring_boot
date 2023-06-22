@@ -21,9 +21,9 @@ import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
  */
 @SpringJUnitConfig(classes = {CacheApplication.class})
 @Import(ClockConfig.class)
-public class FibonacciServiceTests {
+public class FibonacciService3Tests {
     @Autowired
-    FibonacciService fibonacciService;
+    FibonacciService3 fibonacciService;
 
     @Test
     void testFibonacci() {

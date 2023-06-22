@@ -18,10 +18,10 @@ import org.springframework.stereotype.Service;
  * @Description :
  */
 @Service
-public class FibonacciService {
+public class FibonacciService4 {
     @Clock
     public long fibonacci(int n) {
-        var aopProxy = (FibonacciService) AopContext.currentProxy();
+        var aopProxy = (FibonacciService4) AopContext.currentProxy();
         return aopProxy.doFibonacci(n);
     }
 
@@ -33,7 +33,7 @@ public class FibonacciService {
         if (n <= 2) {
             return 1;
         }
-        var aopProxy = (FibonacciService) AopContext.currentProxy();
+        var aopProxy = (FibonacciService4) AopContext.currentProxy();
         return aopProxy.doFibonacci(n - 2) + aopProxy.doFibonacci(n - 1);
     }
 }

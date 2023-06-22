@@ -1,6 +1,5 @@
 package com.example.cache;
 
-import org.springframework.aop.framework.AopContext;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
@@ -15,14 +14,14 @@ import org.springframework.stereotype.Service;
  * @createTime : 2023/6/22 10:04
  * @Email : icexmoon@qq.com
  * @Website : https://icexmoon.cn
- * @Description :
+ * @Description : 使用缓存，但自调用的 fibonacci 服务
  */
 @Service
-public class FibonacciService {
+public class FibonacciService3 {
     @Clock
+    @Cacheable("fibonacci")
     public long fibonacci(int n) {
-        var aopProxy = (FibonacciService) AopContext.currentProxy();
-        return aopProxy.doFibonacci(n);
+        return doFibonacci(n);
     }
 
     @Cacheable("fibonacci")
@@ -33,7 +32,6 @@ public class FibonacciService {
         if (n <= 2) {
             return 1;
         }
-        var aopProxy = (FibonacciService) AopContext.currentProxy();
-        return aopProxy.doFibonacci(n - 2) + aopProxy.doFibonacci(n - 1);
+        return this.doFibonacci(n - 2) + this.doFibonacci(n - 1);
     }
 }
