@@ -103,4 +103,18 @@ public class UserService {
     public String getAddressWithConditionCache2(@NonNull String name){
         return getAddressWithNoCache(name);
     }
+
+    @Cacheable(keyGenerator = "methodKeyGenerator", cacheNames = {"tmp"})
+    public String getAddressWithMethodKeyCache(String name){
+        String address = this.getAddressWithNoCache(name);
+        log.info("query %s and cache %s.".formatted(name, address));
+        return address;
+    }
+
+    @Cacheable(keyGenerator = "methodKeyGenerator", cacheNames = {"tmp"})
+    public String getAddressWithMethodKeyCache2(String name){
+        String address = this.getAddressWithNoCache(name);
+        log.info("query %s and cache %s.".formatted(name, address));
+        return address;
+    }
 }

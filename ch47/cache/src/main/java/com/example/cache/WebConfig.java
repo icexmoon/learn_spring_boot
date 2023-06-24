@@ -6,9 +6,13 @@ import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.concurrent.ConcurrentMapCache;
+import org.springframework.cache.interceptor.KeyGenerator;
+import org.springframework.cache.interceptor.SimpleKeyGenerator;
 import org.springframework.cache.support.SimpleCacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.Ordered;
+import org.springframework.core.annotation.Order;
 
 import java.util.List;
 
@@ -34,7 +38,8 @@ public class WebConfig {
         cacheManager.setCaches(List.of(
                 new ConcurrentMapCache("fibonacci"),
                 new ConcurrentMapCache("addresses1"),
-                new ConcurrentMapCache("addresses2")));
+                new ConcurrentMapCache("addresses2"),
+                new ConcurrentMapCache("tmp")));
         return cacheManager;
     }
 
@@ -53,5 +58,16 @@ public class WebConfig {
                 AopConfigUtils.forceAutoProxyCreatorToExposeProxy(registry);
             }
         };
+    }
+
+    @Order(Ordered.HIGHEST_PRECEDENCE)
+    @Bean
+    KeyGenerator keyGenerator(){
+        return new SimpleKeyGenerator();
+    }
+
+    @Bean
+    MethodKeyGenerator methodKeyGenerator(){
+        return new MethodKeyGenerator();
     }
 }
