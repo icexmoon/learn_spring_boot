@@ -39,6 +39,7 @@ public class WebConfig {
                 new ConcurrentMapCache("fibonacci"),
                 new ConcurrentMapCache("addresses1"),
                 new ConcurrentMapCache("addresses2"),
+                new ConcurrentMapCache("addresses3"),
                 new ConcurrentMapCache("tmp")));
         return cacheManager;
     }

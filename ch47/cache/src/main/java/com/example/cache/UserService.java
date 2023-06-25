@@ -1,6 +1,7 @@
 package com.example.cache;
 
 import lombok.Getter;
+import lombok.Setter;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.aop.framework.AopContext;
 import org.springframework.cache.annotation.*;
@@ -28,22 +29,24 @@ import java.util.concurrent.ConcurrentHashMap;
 @CacheConfig(cacheNames = {"addresses1", "addresses2"})
 public class UserService {
     @Getter
-    private final Map<String, String> longNameAddresses = new ConcurrentHashMap<>();
+    @Setter
+    private Map<String, String> longNameAddresses = new ConcurrentHashMap<>();
 
     {
         longNameAddresses.put("DavisMiller", "上海南京路15号");
         longNameAddresses.put("RodriguezSmith", "马德里圣玛利亚街101号");
     }
 
+    @Setter
     @Getter
-    private final Map<String, String> shortNameAddresses = new ConcurrentHashMap<>();
+    private Map<String, String> shortNameAddresses = new ConcurrentHashMap<>();
 
     {
         shortNameAddresses.put("LiLei", "北京王府井115号");
         shortNameAddresses.put("XiaoMin", "纽约大十字街11号");
     }
 
-    @Cacheable()
+    @Cacheable
     public String getAddress(@NonNull String name) {
         log.info("query name: %s".formatted(name));
         var proxy = (UserService) AopContext.currentProxy();
@@ -116,5 +119,10 @@ public class UserService {
         String address = this.getAddressWithNoCache(name);
         log.info("query %s and cache %s.".formatted(name, address));
         return address;
+    }
+
+    @Cacheable(cacheNames = {"addresses3"},key = "#user.getName()")
+    public String getAddress(User user){
+        return this.getAddressWithNoCache(user.getName());
     }
 }

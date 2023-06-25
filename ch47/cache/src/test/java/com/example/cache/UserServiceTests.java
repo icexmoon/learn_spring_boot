@@ -1,10 +1,13 @@
 package com.example.cache;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.CacheManager;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
+
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Created with IntelliJ IDEA.
@@ -20,6 +23,7 @@ import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
  * @Description :
  */
 @SpringJUnitConfig(classes = CacheApplication.class)
+@SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
 public class UserServiceTests {
     @Autowired
     private UserService userService;
@@ -27,6 +31,19 @@ public class UserServiceTests {
     private CacheManager cacheManager;
     @Autowired
     private CacheUtil cacheUtil;
+
+    @BeforeEach
+    void beforeEach(){
+        cacheUtil.clearAllCache();
+        ConcurrentHashMap<String, String> longNameAddresses = new ConcurrentHashMap<>();
+        userService.setLongNameAddresses(longNameAddresses);
+        ConcurrentHashMap<String, String> shortNameAddresses = new ConcurrentHashMap<>();
+        userService.setShortNameAddresses(shortNameAddresses);
+        longNameAddresses.put("DavisMiller", "上海南京路15号");
+        longNameAddresses.put("RodriguezSmith", "马德里圣玛利亚街101号");
+        shortNameAddresses.put("LiLei", "北京王府井115号");
+        shortNameAddresses.put("XiaoMin", "纽约大十字街11号");
+    }
 
     @Test
     void testUserService() {
@@ -78,5 +95,12 @@ public class UserServiceTests {
         userService.getAddressWithConditionCache2(name);
         userService.getAddressWithConditionCache2(name2);
         cacheUtil.printCacheManager();
+    }
+
+    @Test
+    void testGetAddressWithUser(){
+        User user = new User("DavisMiller");
+        userService.getAddress(user);
+        Assertions.assertTrue(cacheUtil.containMethodCache("addresses3", user.getName()));
     }
 }
