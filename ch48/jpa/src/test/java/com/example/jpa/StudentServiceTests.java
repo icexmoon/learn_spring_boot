@@ -8,7 +8,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.TestPropertySource;
+import org.springframework.test.context.junit.jupiter.web.SpringJUnitWebConfig;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -26,7 +27,9 @@ import java.util.List;
  * @Website : https://icexmoon.cn
  * @Description :
  */
-@SpringBootTest
+@SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
+@SpringJUnitWebConfig(classes = {JpaApplication.class})
+@TestPropertySource("classpath:application.properties")
 public class StudentServiceTests {
     @Autowired
     private StudentService studentService;
