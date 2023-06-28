@@ -20,6 +20,7 @@ import java.time.LocalDate;
  * @Website : https://icexmoon.cn
  * @Description :
  */
+@EntityListeners(EntityEventListener.class)
 @Getter
 @Setter
 @Entity(name = "user_student")
@@ -85,38 +86,38 @@ public class Student {
         return age;
     }
 
-    @PrePersist
-    public void prePersist() {
-        log.info("New student %s will be add.".formatted(this));
-    }
-
-    @PostPersist
-    public void postPersist() {
-        log.info("New student %s is already added.".formatted(this));
-    }
-
-    @PreRemove
-    public void preRemove() {
-        log.info("Student %s will be removed.".formatted(this));
-    }
-
-    @PostRemove
-    public void postRemove() {
-        log.info("Student %s is already removed.".formatted(this));
-    }
-
-    @PreUpdate
-    public void preUpdate() {
-        log.info("Student %s is will be updated.".formatted(this));
-    }
-
-    @PostUpdate
-    public void postUpdate() {
-        log.info("Student %s is already updated.".formatted(this));
-    }
-
-    @PostLoad
-    public void postLoad() {
-        log.info("Student %s is loaded.".formatted(this));
-    }
+//    @PrePersist
+//    public void prePersist() {
+//        log.info("New student %s will be add.".formatted(this));
+//    }
+//
+//    @PostPersist
+//    public void postPersist() {
+//        log.info("New student %s is already added.".formatted(this));
+//    }
+//
+//    @PreRemove
+//    public void preRemove() {
+//        log.info("Student %s will be removed.".formatted(this));
+//    }
+//
+//    @PostRemove
+//    public void postRemove() {
+//        log.info("Student %s is already removed.".formatted(this));
+//    }
+//
+//    @PreUpdate
+//    public void preUpdate() {
+//        log.info("Student %s is will be updated.".formatted(this));
+//    }
+//
+//    @PostUpdate
+//    public void postUpdate() {
+//        log.info("Student %s is already updated.".formatted(this));
+//    }
+//
+//    @PostLoad
+//    public void postLoad() {
+//        log.info("Student %s is loaded.".formatted(this));
+//    }
 }
