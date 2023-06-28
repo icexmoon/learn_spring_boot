@@ -20,7 +20,6 @@ import java.time.LocalDate;
  * @Website : https://icexmoon.cn
  * @Description :
  */
-//@EntityListeners(DirtyDataRecorderInterceptor.class)
 @Getter
 @Setter
 @Entity(name = "user_student")
@@ -31,6 +30,7 @@ public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @EqualsAndHashCode.Exclude
+    @Setter
     private Long id;
 
     @Column(name = "NAME", length = 50, nullable = false, unique = false)

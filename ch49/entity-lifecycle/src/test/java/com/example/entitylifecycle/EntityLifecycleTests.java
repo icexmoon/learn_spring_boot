@@ -97,9 +97,9 @@ public class EntityLifecycleTests {
         Session session = sessionFactory.withOptions().interceptor(new DirtyDataRecorderInterceptor()).openSession();
         Transaction transaction = session.beginTransaction();
         var student = new Student("icexmoon", LocalDate.of(1990, 1, 1), Gender.MALE);
-        // 添加实体，实体编程持久化的
+        // 添加实体，实体变成持久化的
         session.persist(student);
-        // 删除实体，实体编程已分离的
+        // 删除实体，实体变成已分离的
         session.evict(student);
         // 尝试添加已分离的实体，会抛出一个PersistentObjectException异常
         Assertions.assertThrows(PersistentObjectException.class, () -> {
@@ -140,7 +140,7 @@ public class EntityLifecycleTests {
     }
 
     @Test
-    void testMergeWithNewEntity() {
+    void testMergeWithPersistedEntity() {
         Session session = sessionFactory.withOptions().interceptor(new DirtyDataRecorderInterceptor()).openSession();
         Transaction transaction = session.beginTransaction();
         List<Student> students = session.createQuery("from user_student", Student.class)
@@ -159,16 +159,16 @@ public class EntityLifecycleTests {
         // 修改过实体，所以这里有脏数据
         Assertions.assertEquals(1, dirtyEntities.size());
         // 只存在数据修改，数据条目没有变化
-        assertStudentsCount(students.size() );
+        assertStudentsCount(students.size());
     }
 
     @Test
-    void testMergeWithPersistedEntity() {
+    void testMergeWithNewEntity() {
         Session session = sessionFactory.withOptions().interceptor(new DirtyDataRecorderInterceptor()).openSession();
         Transaction transaction = session.beginTransaction();
         List<Student> students = session.createQuery("from user_student", Student.class)
                 .getResultList();
-        // 用一个持久度额 Entity 添加
+        // 用一个新的 Entity 添加
         Student lalala = new Student("lalala", LocalDate.of(2001, 1, 1), Gender.MALE);
         Student mergedLalala = session.merge(lalala);
         // 合并后的 entity 与原始 entity 不是同一个对象，但内容一致
@@ -183,5 +183,66 @@ public class EntityLifecycleTests {
         var student = modifiedStudents.stream().filter(s -> s.getName().equals(mergedLalala.getName())).findFirst().get();
         Assertions.assertEquals(mergedLalala, student);
         assertStudentsCount(students.size() + 1);
+    }
+
+    @Test
+    void testIdentityField() {
+        Session session = sessionFactory.withOptions().interceptor(new DirtyDataRecorderInterceptor()).openSession();
+        Transaction transaction = session.beginTransaction();
+        List<Student> students = session.createQuery("from user_student", Student.class)
+                .getResultList();
+        var icexmoon = students.stream().filter(s -> s.getName().equals("icexmoon")).findFirst().get();
+        var student = new Student("icexmoon", LocalDate.of(2002, 1, 1), Gender.MALE);
+        student.setId(icexmoon.getId());
+        session.merge(student);
+        transaction.commit();
+        session.close();
+        var modifiedStudents = studentRepository.findAll();
+        Assertions.assertEquals(this.students.size(), modifiedStudents.size());
+        var modifiedIcexmoon = modifiedStudents.stream().filter(s -> s.getName().equals("icexmoon")).findFirst().get();
+        Assertions.assertEquals(student, modifiedIcexmoon);
+    }
+
+    @Test
+    void testEvict(){
+        Session session = sessionFactory.withOptions().interceptor(new DirtyDataRecorderInterceptor()).openSession();
+        Transaction transaction = session.beginTransaction();
+        List<Student> students = session.createQuery("from user_student", Student.class)
+                .getResultList();
+        var icexmoon = students.stream().filter(s -> s.getName().equals("icexmoon")).findFirst().get();
+        session.evict(icexmoon);
+        transaction.commit();
+        session.close();
+        var modifiedStudents = studentRepository.findAll();
+        Assertions.assertEquals(this.students.size() , modifiedStudents.size());
+    }
+
+    @Test
+    void testRemove() {
+        Session session = sessionFactory.withOptions().interceptor(new DirtyDataRecorderInterceptor()).openSession();
+        Transaction transaction = session.beginTransaction();
+        List<Student> students = session.createQuery("from user_student", Student.class)
+                .getResultList();
+        var icexmoon = students.stream().filter(s -> s.getName().equals("icexmoon")).findFirst().get();
+        session.remove(icexmoon);
+        transaction.commit();
+        session.close();
+        var modifiedStudents = studentRepository.findAll();
+        Assertions.assertEquals(this.students.size() - 1, modifiedStudents.size());
+    }
+
+    @Test
+    void testRemoveThenPersist() {
+        Session session = sessionFactory.withOptions().interceptor(new DirtyDataRecorderInterceptor()).openSession();
+        Transaction transaction = session.beginTransaction();
+        List<Student> students = session.createQuery("from user_student", Student.class)
+                .getResultList();
+        var icexmoon = students.stream().filter(s -> s.getName().equals("icexmoon")).findFirst().get();
+        session.remove(icexmoon);
+        session.persist(icexmoon);
+        transaction.commit();
+        session.close();
+        var modifiedStudents = studentRepository.findAll();
+        Assertions.assertEquals(this.students.size(), modifiedStudents.size());
     }
 }
