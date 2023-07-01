@@ -1,5 +1,6 @@
-package com.example.keyuniqindex;
+package com.example.keyuniqindex.repository;
 
+import com.example.keyuniqindex.entity.StudentClub;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -8,14 +9,14 @@ import org.springframework.stereotype.Repository;
  *
  * @author : 魔芋红茶
  * @version : 1.0
- * @Project : jpa
- * @Package : com.example.jpa.repository.user
+ * @Project : key-uniq-index
+ * @Package : com.example.keyuniqindex.repository
  * @ClassName : .java
- * @createTime : 2023/6/25 12:03
+ * @createTime : 2023/7/1 15:03
  * @Email : icexmoon@qq.com
  * @Website : https://icexmoon.cn
  * @Description :
  */
 @Repository
-public interface StudentRepository extends JpaRepository<Student, Long> {
+public interface StudentClubRepository extends JpaRepository<StudentClub, Long> {
 }

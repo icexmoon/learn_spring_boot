@@ -1,11 +1,12 @@
 package com.example.keyuniqindex;
 
+import com.example.keyuniqindex.entity.Student;
+import com.example.keyuniqindex.repository.StudentRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Import;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
-
-import java.time.LocalDate;
 
 /**
  * Created with IntelliJ IDEA.
@@ -23,18 +24,13 @@ import java.time.LocalDate;
 @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
 @SpringJUnitConfig(classes = {KeyUniqIndexApplication.class})
 @TestPropertySource("classpath:application.properties")
+@Import(ExampleDataConfig.class)
 public class StudentTests {
     @Autowired
     private StudentRepository studentRepository;
 
     @Test
-    void testAddNewStudent(){
-        Student s = Student.builder()
-                .number("2010000001")
-                .name("icexmoon")
-                .birthDay(LocalDate.of(2000,1,1))
-                .gender(Gender.MALE)
-                .build();
+    void testAddNewStudent(@Autowired Student s){
         studentRepository.save(s);
     }
 }

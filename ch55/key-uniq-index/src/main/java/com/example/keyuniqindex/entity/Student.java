@@ -1,4 +1,4 @@
-package com.example.keyuniqindex;
+package com.example.keyuniqindex.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;

@@ -1,4 +1,4 @@
-package com.example.keyuniqindex;
+package com.example.keyuniqindex.entity;
 
 /**
  * Created with IntelliJ IDEA.
