@@ -1,4 +1,4 @@
-package com.example.onetoone;
+package com.example.onetoone.v4;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -9,13 +9,13 @@ import org.springframework.stereotype.Repository;
  * @author : 魔芋红茶
  * @version : 1.0
  * @Project : one-to-one
- * @Package : com.example.onetoone
+ * @Package : com.example.onetoone.v4
  * @ClassName : .java
- * @createTime : 2023/7/2 10:07
+ * @createTime : 2023/7/2 15:33
  * @Email : icexmoon@qq.com
  * @Website : https://icexmoon.cn
  * @Description :
  */
 @Repository
-public interface StudentInfoRepository extends JpaRepository<StudentInfo, Long> {
+public interface StudentRepository4 extends JpaRepository<Student, Long> {
 }

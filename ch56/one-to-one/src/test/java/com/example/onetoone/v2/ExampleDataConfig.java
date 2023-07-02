@@ -1,4 +1,4 @@
-package com.example.onetoone;
+package com.example.onetoone.v2;
 
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
@@ -11,9 +11,9 @@ import java.time.LocalDate;
  * @author : 魔芋红茶
  * @version : 1.0
  * @Project : one-to-one
- * @Package : com.example.onetoone
+ * @Package : com.example.onetoone.v2
  * @ClassName : .java
- * @createTime : 2023/7/2 10:07
+ * @createTime : 2023/7/2 12:44
  * @Email : icexmoon@qq.com
  * @Website : https://icexmoon.cn
  * @Description :
@@ -21,56 +21,46 @@ import java.time.LocalDate;
 @TestConfiguration
 public class ExampleDataConfig {
     @Bean
-    public Student student() {
+    Student student() {
         return Student.builder()
                 .name("icexmoon")
                 .birthDay(LocalDate.of(2000, 1, 1))
-                .studentInfo(null)
                 .build();
     }
 
     @Bean
-    public Student student2() {
+    Student student2() {
         return Student.builder()
                 .name("lalala")
                 .birthDay(LocalDate.of(2005, 10, 1))
-                .studentInfo(studentInfo2())
                 .build();
     }
 
     @Bean
-    public Student student3(){
+    Student student3() {
         return Student.builder()
-                .name("JackChen")
-                .birthDay(LocalDate.of(2008,3,5))
-                .studentInfo(studentInfo3())
+                .name("LiXiang")
+                .birthDay(LocalDate.of(2002, 5, 8))
                 .build();
     }
 
     @Bean
-    public StudentInfo studentInfo3() {
+    StudentInfo studentInfo2(){
         return StudentInfo.builder()
                 .loveDraw(false)
                 .loveMusic(true)
-                .desc("very good boy.")
+                .desc("is a good game player.")
+                .student(student2())
                 .build();
     }
 
     @Bean
-    public StudentInfo studentInfo(){
+    StudentInfo studentInfo3(){
         return StudentInfo.builder()
-                .loveMusic(false)
+                .loveMusic(true)
                 .loveDraw(false)
-                .desc("")
-                .build();
-    }
-
-    @Bean
-    public StudentInfo studentInfo2(){
-        return StudentInfo.builder()
-                .loveMusic(false)
-                .loveDraw(true)
-                .desc("will be a good drawer.")
+                .desc("The boy like music very much.")
+                .student(student3())
                 .build();
     }
 }

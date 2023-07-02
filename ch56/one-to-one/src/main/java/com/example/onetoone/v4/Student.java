@@ -1,10 +1,9 @@
-package com.example.onetoone;
+package com.example.onetoone.v4;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.validator.constraints.Length;
 
 import java.time.LocalDate;
@@ -15,28 +14,40 @@ import java.time.LocalDate;
  * @author : 魔芋红茶
  * @version : 1.0
  * @Project : one-to-one
- * @Package : com.example.onetoone
+ * @Package : com.example.onetoone.v4
  * @ClassName : .java
- * @createTime : 2023/7/2 9:45
+ * @createTime : 2023/7/2 15:32
  * @Email : icexmoon@qq.com
  * @Website : https://icexmoon.cn
  * @Description :
  */
+@ToString
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Table(name = "user_student")
+@Entity(name = "Student4")
+@Table(name = "user_student4")
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @NotNull
+    @NotBlank
     @Length(max = 45)
     private String name;
     @NotNull
     private LocalDate birthDay;
-    @OneToOne
-    @JoinColumn(name = "student_info_id", referencedColumnName = "id")
+    @OneToOne(mappedBy = "student",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true)
+    @PrimaryKeyJoinColumn
+    @Setter(AccessLevel.PRIVATE)
     private StudentInfo studentInfo;
+
+    public Student addStudentInfoAssociation(StudentInfo studentInfo) {
+        this.setStudentInfo(studentInfo);
+        studentInfo.setStudent(this);
+        return this;
+    }
 }

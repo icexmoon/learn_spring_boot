@@ -1,11 +1,11 @@
-package com.example.onetoone;
+package com.example.onetoone.v2;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.hibernate.validator.constraints.Length;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,18 +13,19 @@ import org.hibernate.validator.constraints.Length;
  * @author : 魔芋红茶
  * @version : 1.0
  * @Project : one-to-one
- * @Package : com.example.onetoone
+ * @Package : com.example.onetoone.v2
  * @ClassName : .java
- * @createTime : 2023/7/2 9:48
+ * @createTime : 2023/7/2 12:32
  * @Email : icexmoon@qq.com
  * @Website : https://icexmoon.cn
  * @Description :
  */
-@Builder
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Table(name = "user_student_info")
+@Builder
+@Entity(name = "StudentInfo2")
+@Table(name = "user_student_info2")
 public class StudentInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,7 +35,10 @@ public class StudentInfo {
     @NotNull
     private Boolean loveDraw;
     @NotNull
-    @Length(max = 255)
     @Column(name = "description")
     private String desc;
+    @NotNull
+    @OneToOne
+    @JoinColumn(name = "student_id")
+    private Student student;
 }

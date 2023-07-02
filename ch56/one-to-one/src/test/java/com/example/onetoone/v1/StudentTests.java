@@ -1,5 +1,6 @@
-package com.example.onetoone;
+package com.example.onetoone.v1;
 
+import com.example.onetoone.OneToOneApplication;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -53,6 +54,10 @@ public class StudentTests {
                     .birthDay(LocalDate.of(1999, 1, 1))
                     .studentInfo(studentInfo)
                     .build());
+        });
+        var students = studentRepository.findAll();
+        students.forEach(s->{
+            System.out.println(s.getStudentInfo());
         });
     }
 }

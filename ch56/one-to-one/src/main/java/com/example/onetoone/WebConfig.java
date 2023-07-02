@@ -1,7 +1,6 @@
 package com.example.onetoone;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,12 +10,11 @@ import org.springframework.stereotype.Repository;
  * @Project : one-to-one
  * @Package : com.example.onetoone
  * @ClassName : .java
- * @createTime : 2023/7/2 10:04
+ * @createTime : 2023/7/2 13:19
  * @Email : icexmoon@qq.com
  * @Website : https://icexmoon.cn
  * @Description :
  */
-@Repository
-public interface StudentRepository extends JpaRepository<Student, Long> {
-
+@Configuration
+public class WebConfig {
 }
