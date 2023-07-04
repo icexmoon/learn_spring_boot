@@ -1,0 +1,192 @@
+2023-07-03 17:36:16.691 INFO [background-preinit] org.hibernate.validator.internal.util.Version : HV000001: Hibernate Validator 8.0.0.Final
+2023-07-03 17:36:16.710 INFO [restartedMain] com.example.manytomany.ManyToManyApplication : Starting ManyToManyApplication using Java 17.0.7 with PID 81020 (D:\workspace\learn_spring_boot\ch58\many-to-many\target\classes started by 70748 in D:\workspace\learn_spring_boot\ch58\many-to-many)
+2023-07-03 17:36:16.714 INFO [restartedMain] com.example.manytomany.ManyToManyApplication : No active profile set, falling back to 1 default profile: "default"
+2023-07-03 17:36:17.645 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-03 17:36:17.647 INFO [restartedMain] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-07-03 17:36:17.647 INFO [restartedMain] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-03 17:36:17.708 INFO [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-07-03 17:36:17.842 INFO [restartedMain] org.hibernate.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-03 17:36:17.877 INFO [restartedMain] org.hibernate.Version : HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-03 17:36:17.878 INFO [restartedMain] org.hibernate.cfg.Environment : HHH000406: Using bytecode reflection optimizer
+2023-07-03 17:36:17.979 INFO [restartedMain] org.hibernate.bytecode.internal.BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-07-03 17:36:18.078 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-07-03 17:36:18.280 INFO [restartedMain] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ce9b9af
+2023-07-03 17:36:18.281 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-07-03 17:36:18.309 WARN [restartedMain] org.hibernate.orm.deprecation : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-07-03 17:36:18.430 INFO [restartedMain] org.hibernate.bytecode.internal.BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-07-03 17:36:18.806 INFO [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-03 17:36:19.270 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"]
+2023-07-03 17:36:19.292 INFO [restartedMain] com.example.manytomany.ManyToManyApplication : Started ManyToManyApplication in 2.978 seconds (process running for 3.668)
+2023-07-03 17:39:39.648 INFO [Thread-5] org.apache.coyote.http11.Http11NioProtocol : Pausing ProtocolHandler ["http-nio-8080"]
+2023-07-03 17:39:39.649 INFO [Thread-5] org.apache.catalina.core.StandardService : Stopping service [Tomcat]
+2023-07-03 17:39:39.653 INFO [Thread-5] org.apache.coyote.http11.Http11NioProtocol : Stopping ProtocolHandler ["http-nio-8080"]
+2023-07-03 17:39:39.655 INFO [Thread-5] org.apache.coyote.http11.Http11NioProtocol : Destroying ProtocolHandler ["http-nio-8080"]
+2023-07-03 17:39:39.660 INFO [Thread-5] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-07-03 17:39:39.666 INFO [Thread-5] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-07-03 17:39:39.763 INFO [restartedMain] com.example.manytomany.ManyToManyApplication : Starting ManyToManyApplication using Java 17.0.7 with PID 81020 (D:\workspace\learn_spring_boot\ch58\many-to-many\target\classes started by 70748 in D:\workspace\learn_spring_boot\ch58\many-to-many)
+2023-07-03 17:39:39.765 INFO [restartedMain] com.example.manytomany.ManyToManyApplication : No active profile set, falling back to 1 default profile: "default"
+2023-07-03 17:39:39.987 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-03 17:39:39.988 INFO [restartedMain] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-07-03 17:39:39.988 INFO [restartedMain] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-03 17:39:40.003 INFO [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-07-03 17:39:40.042 INFO [restartedMain] org.hibernate.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-03 17:39:40.048 INFO [restartedMain] org.hibernate.bytecode.internal.BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-07-03 17:39:40.049 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-2 - Starting...
+2023-07-03 17:39:40.064 INFO [restartedMain] com.zaxxer.hikari.pool.HikariPool : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1c14f33a
+2023-07-03 17:39:40.065 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-2 - Start completed.
+2023-07-03 17:39:40.065 WARN [restartedMain] org.hibernate.orm.deprecation : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-07-03 17:39:40.081 INFO [restartedMain] org.hibernate.bytecode.internal.BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-07-03 17:39:40.112 INFO [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-03 17:39:40.290 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"]
+2023-07-03 17:39:40.299 INFO [restartedMain] com.example.manytomany.ManyToManyApplication : Started ManyToManyApplication in 0.574 seconds (process running for 204.675)
+2023-07-03 17:39:47.338 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-2 - Shutdown initiated...
+2023-07-03 17:39:47.342 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-2 - Shutdown completed.
+2023-07-03 17:52:45.189 INFO [background-preinit] org.hibernate.validator.internal.util.Version : HV000001: Hibernate Validator 8.0.0.Final
+2023-07-03 17:52:45.213 INFO [restartedMain] com.example.manytomany.ManyToManyApplication : Starting ManyToManyApplication using Java 17.0.7 with PID 25656 (D:\workspace\learn_spring_boot\ch58\many-to-many\target\classes started by 70748 in D:\workspace\learn_spring_boot\ch58\many-to-many)
+2023-07-03 17:52:45.216 INFO [restartedMain] com.example.manytomany.ManyToManyApplication : No active profile set, falling back to 1 default profile: "default"
+2023-07-03 17:52:46.173 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-03 17:52:46.174 INFO [restartedMain] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-07-03 17:52:46.175 INFO [restartedMain] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-03 17:52:46.222 INFO [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-07-03 17:52:46.334 INFO [restartedMain] org.hibernate.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-03 17:52:46.386 INFO [restartedMain] org.hibernate.Version : HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-03 17:52:46.388 INFO [restartedMain] org.hibernate.cfg.Environment : HHH000406: Using bytecode reflection optimizer
+2023-07-03 17:52:46.517 INFO [restartedMain] org.hibernate.bytecode.internal.BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-07-03 17:52:46.616 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-07-03 17:52:46.918 INFO [restartedMain] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@42d42194
+2023-07-03 17:52:46.919 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-07-03 17:52:46.952 WARN [restartedMain] org.hibernate.orm.deprecation : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-07-03 17:52:47.114 INFO [restartedMain] org.hibernate.bytecode.internal.BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-07-03 17:52:47.575 INFO [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-03 17:52:48.061 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"]
+2023-07-03 17:52:48.085 INFO [restartedMain] com.example.manytomany.ManyToManyApplication : Started ManyToManyApplication in 3.255 seconds (process running for 4.145)
+2023-07-03 17:57:31.300 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-07-03 17:57:31.307 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-07-03 18:01:32.872 INFO [background-preinit] org.hibernate.validator.internal.util.Version : HV000001: Hibernate Validator 8.0.0.Final
+2023-07-03 18:01:32.889 INFO [restartedMain] com.example.manytomany.ManyToManyApplication : Starting ManyToManyApplication using Java 17.0.7 with PID 20400 (D:\workspace\learn_spring_boot\ch58\many-to-many\target\classes started by 70748 in D:\workspace\learn_spring_boot\ch58\many-to-many)
+2023-07-03 18:01:32.893 INFO [restartedMain] com.example.manytomany.ManyToManyApplication : No active profile set, falling back to 1 default profile: "default"
+2023-07-03 18:01:33.741 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-03 18:01:33.744 INFO [restartedMain] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-07-03 18:01:33.744 INFO [restartedMain] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-03 18:01:33.795 INFO [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-07-03 18:01:33.943 INFO [restartedMain] org.hibernate.Version : HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-03 18:01:33.944 INFO [restartedMain] org.hibernate.cfg.Environment : HHH000406: Using bytecode reflection optimizer
+2023-07-03 18:01:34.033 INFO [restartedMain] org.hibernate.bytecode.internal.BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-07-03 18:01:34.107 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-07-03 18:01:34.318 INFO [restartedMain] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@232be14
+2023-07-03 18:01:34.320 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-07-03 18:01:34.353 WARN [restartedMain] org.hibernate.orm.deprecation : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-07-03 18:01:34.533 INFO [restartedMain] org.hibernate.bytecode.internal.BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-07-03 18:01:34.956 INFO [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-03 18:01:35.427 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"]
+2023-07-03 18:01:35.453 INFO [restartedMain] com.example.manytomany.ManyToManyApplication : Started ManyToManyApplication in 2.89 seconds (process running for 3.471)
+2023-07-03 18:04:44.368 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-07-03 18:04:44.376 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-07-03 18:04:46.635 INFO [background-preinit] org.hibernate.validator.internal.util.Version : HV000001: Hibernate Validator 8.0.0.Final
+2023-07-03 18:04:46.657 INFO [restartedMain] com.example.manytomany.ManyToManyApplication : Starting ManyToManyApplication using Java 17.0.7 with PID 60912 (D:\workspace\learn_spring_boot\ch58\many-to-many\target\classes started by 70748 in D:\workspace\learn_spring_boot\ch58\many-to-many)
+2023-07-03 18:04:46.659 INFO [restartedMain] com.example.manytomany.ManyToManyApplication : No active profile set, falling back to 1 default profile: "default"
+2023-07-03 18:04:47.427 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-03 18:04:47.428 INFO [restartedMain] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-07-03 18:04:47.428 INFO [restartedMain] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-03 18:04:47.469 INFO [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-07-03 18:04:47.567 INFO [restartedMain] org.hibernate.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-03 18:04:47.595 INFO [restartedMain] org.hibernate.Version : HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-03 18:04:47.596 INFO [restartedMain] org.hibernate.cfg.Environment : HHH000406: Using bytecode reflection optimizer
+2023-07-03 18:04:47.677 INFO [restartedMain] org.hibernate.bytecode.internal.BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-07-03 18:04:47.749 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-07-03 18:04:47.931 INFO [restartedMain] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@60a9c50b
+2023-07-03 18:04:47.932 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-07-03 18:04:47.958 WARN [restartedMain] org.hibernate.orm.deprecation : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-07-03 18:04:48.083 INFO [restartedMain] org.hibernate.bytecode.internal.BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-07-03 18:04:48.483 INFO [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-03 18:04:48.907 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"]
+2023-07-03 18:04:48.931 INFO [restartedMain] com.example.manytomany.ManyToManyApplication : Started ManyToManyApplication in 2.581 seconds (process running for 3.25)
+2023-07-03 18:07:21.938 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-07-03 18:07:21.944 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-07-03 18:07:24.122 INFO [background-preinit] org.hibernate.validator.internal.util.Version : HV000001: Hibernate Validator 8.0.0.Final
+2023-07-03 18:07:24.142 INFO [restartedMain] com.example.manytomany.ManyToManyApplication : Starting ManyToManyApplication using Java 17.0.7 with PID 55576 (D:\workspace\learn_spring_boot\ch58\many-to-many\target\classes started by 70748 in D:\workspace\learn_spring_boot\ch58\many-to-many)
+2023-07-03 18:07:24.146 INFO [restartedMain] com.example.manytomany.ManyToManyApplication : No active profile set, falling back to 1 default profile: "default"
+2023-07-03 18:07:24.913 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-03 18:07:24.915 INFO [restartedMain] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-07-03 18:07:24.915 INFO [restartedMain] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-03 18:07:24.955 INFO [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-07-03 18:07:25.051 INFO [restartedMain] org.hibernate.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-03 18:07:25.077 INFO [restartedMain] org.hibernate.Version : HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-03 18:07:25.079 INFO [restartedMain] org.hibernate.cfg.Environment : HHH000406: Using bytecode reflection optimizer
+2023-07-03 18:07:25.156 INFO [restartedMain] org.hibernate.bytecode.internal.BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-07-03 18:07:25.230 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-07-03 18:07:25.414 INFO [restartedMain] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7590f6a7
+2023-07-03 18:07:25.415 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-07-03 18:07:25.441 WARN [restartedMain] org.hibernate.orm.deprecation : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-07-03 18:07:25.566 INFO [restartedMain] org.hibernate.bytecode.internal.BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-07-03 18:07:25.956 INFO [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-03 18:07:26.372 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"]
+2023-07-03 18:07:26.396 INFO [restartedMain] com.example.manytomany.ManyToManyApplication : Started ManyToManyApplication in 2.548 seconds (process running for 3.115)
+2023-07-03 18:14:20.833 INFO [Thread-5] org.apache.coyote.http11.Http11NioProtocol : Pausing ProtocolHandler ["http-nio-8080"]
+2023-07-03 18:14:20.833 INFO [Thread-5] org.apache.catalina.core.StandardService : Stopping service [Tomcat]
+2023-07-03 18:14:20.836 INFO [Thread-5] org.apache.coyote.http11.Http11NioProtocol : Stopping ProtocolHandler ["http-nio-8080"]
+2023-07-03 18:14:20.838 INFO [Thread-5] org.apache.coyote.http11.Http11NioProtocol : Destroying ProtocolHandler ["http-nio-8080"]
+2023-07-03 18:14:20.845 INFO [Thread-5] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-07-03 18:14:20.853 INFO [Thread-5] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-07-03 18:14:20.985 INFO [restartedMain] com.example.manytomany.ManyToManyApplication : Starting ManyToManyApplication using Java 17.0.7 with PID 55576 (D:\workspace\learn_spring_boot\ch58\many-to-many\target\classes started by 70748 in D:\workspace\learn_spring_boot\ch58\many-to-many)
+2023-07-03 18:14:20.986 INFO [restartedMain] com.example.manytomany.ManyToManyApplication : No active profile set, falling back to 1 default profile: "default"
+2023-07-03 18:14:21.238 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-03 18:14:21.238 INFO [restartedMain] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-07-03 18:14:21.239 INFO [restartedMain] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-03 18:14:21.254 INFO [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-07-03 18:14:21.311 INFO [restartedMain] org.hibernate.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-03 18:14:21.318 INFO [restartedMain] org.hibernate.bytecode.internal.BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-07-03 18:14:21.319 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-2 - Starting...
+2023-07-03 18:14:21.336 INFO [restartedMain] com.zaxxer.hikari.pool.HikariPool : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a6cf507
+2023-07-03 18:14:21.336 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-2 - Start completed.
+2023-07-03 18:14:21.337 WARN [restartedMain] org.hibernate.orm.deprecation : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-07-03 18:14:21.349 INFO [restartedMain] org.hibernate.bytecode.internal.BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-07-03 18:14:21.383 INFO [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-03 18:14:21.510 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"]
+2023-07-03 18:14:21.520 INFO [restartedMain] com.example.manytomany.ManyToManyApplication : Started ManyToManyApplication in 0.599 seconds (process running for 418.238)
+2023-07-03 18:14:22.925 INFO [Thread-7] org.apache.coyote.http11.Http11NioProtocol : Pausing ProtocolHandler ["http-nio-8080"]
+2023-07-03 18:14:22.925 INFO [Thread-7] org.apache.catalina.core.StandardService : Stopping service [Tomcat]
+2023-07-03 18:14:22.928 INFO [Thread-7] org.apache.coyote.http11.Http11NioProtocol : Stopping ProtocolHandler ["http-nio-8080"]
+2023-07-03 18:14:22.929 INFO [Thread-7] org.apache.coyote.http11.Http11NioProtocol : Destroying ProtocolHandler ["http-nio-8080"]
+2023-07-03 18:14:22.930 INFO [Thread-7] com.zaxxer.hikari.HikariDataSource : HikariPool-2 - Shutdown initiated...
+2023-07-03 18:14:22.935 INFO [Thread-7] com.zaxxer.hikari.HikariDataSource : HikariPool-2 - Shutdown completed.
+2023-07-03 18:14:23.025 INFO [restartedMain] com.example.manytomany.ManyToManyApplication : Starting ManyToManyApplication using Java 17.0.7 with PID 55576 (D:\workspace\learn_spring_boot\ch58\many-to-many\target\classes started by 70748 in D:\workspace\learn_spring_boot\ch58\many-to-many)
+2023-07-03 18:14:23.025 INFO [restartedMain] com.example.manytomany.ManyToManyApplication : No active profile set, falling back to 1 default profile: "default"
+2023-07-03 18:14:23.171 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-03 18:14:23.172 INFO [restartedMain] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-07-03 18:14:23.172 INFO [restartedMain] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-03 18:14:23.187 INFO [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-07-03 18:14:23.216 INFO [restartedMain] org.hibernate.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-03 18:14:23.220 INFO [restartedMain] org.hibernate.bytecode.internal.BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-07-03 18:14:23.221 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-3 - Starting...
+2023-07-03 18:14:23.231 INFO [restartedMain] com.zaxxer.hikari.pool.HikariPool : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@320cf07f
+2023-07-03 18:14:23.231 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-3 - Start completed.
+2023-07-03 18:14:23.232 WARN [restartedMain] org.hibernate.orm.deprecation : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-07-03 18:14:23.243 INFO [restartedMain] org.hibernate.bytecode.internal.BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-07-03 18:14:23.270 INFO [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-03 18:14:23.434 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"]
+2023-07-03 18:14:23.443 INFO [restartedMain] com.example.manytomany.ManyToManyApplication : Started ManyToManyApplication in 0.455 seconds (process running for 420.162)
+2023-07-03 18:18:30.259 INFO [Thread-11] org.apache.coyote.http11.Http11NioProtocol : Pausing ProtocolHandler ["http-nio-8080"]
+2023-07-03 18:18:30.261 INFO [Thread-11] org.apache.catalina.core.StandardService : Stopping service [Tomcat]
+2023-07-03 18:18:30.263 INFO [Thread-11] org.apache.coyote.http11.Http11NioProtocol : Stopping ProtocolHandler ["http-nio-8080"]
+2023-07-03 18:18:30.264 INFO [Thread-11] org.apache.coyote.http11.Http11NioProtocol : Destroying ProtocolHandler ["http-nio-8080"]
+2023-07-03 18:18:30.266 INFO [Thread-11] com.zaxxer.hikari.HikariDataSource : HikariPool-3 - Shutdown initiated...
+2023-07-03 18:18:30.271 INFO [Thread-11] com.zaxxer.hikari.HikariDataSource : HikariPool-3 - Shutdown completed.
+2023-07-03 18:18:30.361 INFO [restartedMain] com.example.manytomany.ManyToManyApplication : Starting ManyToManyApplication using Java 17.0.7 with PID 55576 (D:\workspace\learn_spring_boot\ch58\many-to-many\target\classes started by 70748 in D:\workspace\learn_spring_boot\ch58\many-to-many)
+2023-07-03 18:18:30.362 INFO [restartedMain] com.example.manytomany.ManyToManyApplication : No active profile set, falling back to 1 default profile: "default"
+2023-07-03 18:18:30.518 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-03 18:18:30.519 INFO [restartedMain] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-07-03 18:18:30.519 INFO [restartedMain] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-03 18:18:30.532 INFO [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-07-03 18:18:30.562 INFO [restartedMain] org.hibernate.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-03 18:18:30.567 INFO [restartedMain] org.hibernate.bytecode.internal.BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-07-03 18:18:30.567 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-4 - Starting...
+2023-07-03 18:18:30.577 INFO [restartedMain] com.zaxxer.hikari.pool.HikariPool : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@21865680
+2023-07-03 18:18:30.579 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-4 - Start completed.
+2023-07-03 18:18:30.579 WARN [restartedMain] org.hibernate.orm.deprecation : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-07-03 18:18:30.586 INFO [restartedMain] org.hibernate.bytecode.internal.BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-07-03 18:18:30.613 INFO [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-03 18:18:30.793 INFO [restartedMain] org.apache.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"]
+2023-07-03 18:18:30.803 INFO [restartedMain] com.example.manytomany.ManyToManyApplication : Started ManyToManyApplication in 0.487 seconds (process running for 667.522)
+2023-07-03 19:02:24.901 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-4 - Shutdown initiated...
+2023-07-03 19:02:24.906 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-4 - Shutdown completed.

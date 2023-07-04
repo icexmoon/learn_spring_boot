@@ -1,0 +1,9 @@
+2023-07-03 17:36:18.309 WARN [restartedMain] org.hibernate.orm.deprecation : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-07-03 17:39:40.065 WARN [restartedMain] org.hibernate.orm.deprecation : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-07-03 17:52:46.952 WARN [restartedMain] org.hibernate.orm.deprecation : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-07-03 18:01:34.353 WARN [restartedMain] org.hibernate.orm.deprecation : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-07-03 18:04:47.958 WARN [restartedMain] org.hibernate.orm.deprecation : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-07-03 18:07:25.441 WARN [restartedMain] org.hibernate.orm.deprecation : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-07-03 18:14:21.337 WARN [restartedMain] org.hibernate.orm.deprecation : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-07-03 18:14:23.232 WARN [restartedMain] org.hibernate.orm.deprecation : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-07-03 18:18:30.579 WARN [restartedMain] org.hibernate.orm.deprecation : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
