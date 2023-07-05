@@ -45,8 +45,7 @@ public class Student {
                     CascadeType.PERSIST,
                     CascadeType.REMOVE,
                     CascadeType.DETACH,
-                    CascadeType.REFRESH,
-                    org.hibernate.annotations.CascadeType.LOCK},
+                    CascadeType.REFRESH},
             fetch = FetchType.EAGER)
     @Builder.Default
     private List<Email> emails = new ArrayList<>();
