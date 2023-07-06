@@ -1,4 +1,4 @@
-package com.example.cascade;
+package com.example.cascade.v1;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;

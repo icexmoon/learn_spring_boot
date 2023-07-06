@@ -1,4 +1,4 @@
-package com.example.cascade;
+package com.example.filterentityassociation.v2;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -8,14 +8,14 @@ import org.springframework.stereotype.Repository;
  *
  * @author : 魔芋红茶
  * @version : 1.0
- * @Project : cascade
- * @Package : com.example.cascade
+ * @Project : filter-entity-association
+ * @Package : com.example.filterentityassociation.v2
  * @ClassName : .java
- * @createTime : 2023/7/5 11:17
+ * @createTime : 2023/7/6 11:41
  * @Email : icexmoon@qq.com
  * @Website : https://icexmoon.cn
  * @Description :
  */
-@Repository
+@Repository("StudentRepository2")
 public interface StudentRepository extends JpaRepository<Student, Long> {
 }

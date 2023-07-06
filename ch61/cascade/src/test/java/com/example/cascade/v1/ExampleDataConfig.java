@@ -1,5 +1,7 @@
-package com.example.cascade;
+package com.example.cascade.v1;
 
+import com.example.cascade.v1.Email;
+import com.example.cascade.v1.Student;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 
