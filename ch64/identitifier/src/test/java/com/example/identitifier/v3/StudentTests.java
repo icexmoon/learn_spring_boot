@@ -1,5 +1,7 @@
 package com.example.identitifier.v3;
 
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,16 +30,28 @@ public class StudentTests {
     private StudentRepository studentRepository;
 
     @BeforeEach
-    void beforeEach(@Autowired List<Student> students){
+    void beforeEach(@Autowired List<Student> students) {
         studentRepository.deleteAll();
         studentRepository.saveAll(students);
     }
 
     @Test
-    void test(){
+    void test() {
         List<Student> all = studentRepository.findAll();
-        all.forEach(s->{
+        all.forEach(s -> {
             System.out.println(s);
         });
+    }
+
+    @Test
+    void testIdentifierGenerate(@Autowired EntityManagerFactory entityManagerFactory) {
+        var harry = Student.builder()
+                .name("Harry")
+                .build();
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        entityManager.getTransaction().begin();
+        entityManager.persist(harry);
+//        Assertions.assertNull(harry.getId());
+        entityManager.getTransaction().commit();
     }
 }
